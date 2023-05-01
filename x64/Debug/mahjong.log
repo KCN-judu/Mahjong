@@ -1,0 +1,5 @@
+﻿  mahjong.cpp
+E:\VSdata\mahjong\mahjong.cpp(39,21): warning C4244: “参数”: 从“time_t”转换到“unsigned int”，可能丢失数据
+  main.cpp
+  正在生成代码...
+  mahjong.vcxproj -> E:\VSdata\mahjong\x64\Debug\mahjong.exe
