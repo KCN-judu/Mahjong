@@ -45,7 +45,23 @@ void stdHaiGenerator(Hai& hai);
 
 void haiDistributor(HaiYama& haiYama, HaiRin& haiRin, Hai hai);
 
+class Furo {
+public:
 
+	void chii(Mahjong mahjong);
+
+	void pon(Mahjong mahjong);
+
+	void kon(Mahjong mahjong);
+
+private:
+	stat furoType;
+	//chii - 0 pon - 1 kon - 2
+	stat dora;
+	
+	std::vector<std::vector<stat>> haiType;
+	//mpswk, number
+};
 
 class HaiInHand {
 public:
@@ -68,9 +84,15 @@ enum Kaze {
 class MahjongPlayer {
 public:
 	void setJikaze(Kaze kaze);
-
+	
 	stat getJikaze();
+
+	void draw(HaiYama haiYama);
+
+	bool discard(Mahjong disc);
 private:
+	HaiInHand haiInHand;
+	
 	stat jiKaze = -1;
 };
 
