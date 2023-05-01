@@ -35,6 +35,16 @@ stat MahjongPlayer::getJikaze()
 	return this->jiKaze;
 }
 
+void MahjongPlayer::draw(HaiYama haiYama)
+{
+	this->haiInHand.get(haiYama.back());
+}
+
+bool MahjongPlayer::discard(Mahjong disc)
+{
+	return this->haiInHand.discard(disc);
+}
+
 void stdHaiGenerator(Hai& hai)
 {
 	for (int i = 0; i < 9; ++i) {
@@ -66,7 +76,6 @@ void stdHaiGenerator(Hai& hai)
 			hai.emplace_back(mahjong);
 		}
 	}
-
 }
 
 void haiDistributor(HaiYama& haiYama, HaiRin& haiRin, Hai hai)
